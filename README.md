@@ -1,26 +1,39 @@
 # DOLLAR
 
-Institutional-style HTML liquidity reports and the prompt/skill spec used to generate them.
+Mobile-first institutional USD liquidity reports for OpenClaw.
 
-## Included
+## What this repo is for
 
-- `index.html` — latest mobile-first institutional USD liquidity report
-- `reports/2026-04-05_usd_liquidity_analysis_report_institutional.html` — dated report archive copy
-- `skills/usd_liquidity_plumbing.md` — official-data-first liquidity plumbing skill spec
+This repo is set up so an OpenClaw user can drop the repo contents into a workspace and use the included skill to:
 
-## Report focus
+- ask only for the report cadence/time on first setup
+- create a recurring cron workflow
+- generate complete HTML liquidity reports
+- keep `index.html` refreshed with the latest report
+- archive dated report copies under `reports/`
 
-The report framework is built around six layers:
+## Main files
 
-1. Fed balance sheet and policy implementation
-2. Money markets and repo plumbing
-3. Treasury cash and debt management
-4. Bank and dealer balance-sheet constraints
-5. Financial conditions
-6. Global dollar liquidity
+- `index.html` — latest report
+- `reports/` — dated archived HTML reports
+- `skills/usd-liquidity-html-reporter/` — OpenClaw skill folder
+- `dist/usd-liquidity-html-reporter.skill` — packaged skill file
 
-## Notes
+## OpenClaw usage
 
-- Primary sources are preferred wherever possible: Fed, NY Fed, U.S. Treasury, Chicago Fed, OFR, BIS.
-- Some market series may be rendered from secondary distribution endpoints when direct machine-readable pulls are not practical in a given run.
-- The HTML report is designed for mobile viewing first, with institution-style presentation.
+Copy the `skills/usd-liquidity-html-reporter/` folder into your OpenClaw workspace `skills/` directory, or copy this repo into a workspace and keep the folder structure intact.
+
+Then prompt OpenClaw with something like:
+
+- `달러 유동성 HTML 리포트 세팅해줘`
+- `USD liquidity recurring HTML report setup`
+
+The skill is designed to ask only for cadence/time if missing, then handle the recurring setup and HTML report generation workflow.
+
+## Skill structure
+
+- `SKILL.md` — setup and run workflow
+- `references/data-playbook.md` — official-data-first pull and interpretation rules
+- `references/html-report-spec.md` — institutional HTML output spec
+- `references/cron-automation.md` — recurring cron setup behavior
+- `assets/report-shell.html` — reusable HTML shell

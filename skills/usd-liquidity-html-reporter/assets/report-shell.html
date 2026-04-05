@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{REPORT_TITLE}}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <style>
+    body { font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .num { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900">
+  <!--
+    Replace placeholders with rendered content.
+    Keep the visible output institutional and process-free.
+  -->
+
+  <div class="max-w-6xl mx-auto px-4 py-4 md:px-8 md:py-8 space-y-6">
+    {{HERO_SECTION}}
+    {{IMMEDIATE_TAKEAWAY_SECTION}}
+    {{CHART_SECTION}}
+    {{DATA_CLOCK_SECTION}}
+    {{SNAPSHOT_TABLE_SECTION}}
+    {{LAYER_CARDS_SECTION}}
+    {{INTEGRATED_JUDGMENT_SECTION}}
+    {{SCENARIO_SECTION}}
+    {{NEXT_CHECKPOINTS_SECTION}}
+    {{SOURCES_SECTION}}
+  </div>
+
+  <script>
+    {{CHART_JS}}
+  </script>
+</body>
+</html>
