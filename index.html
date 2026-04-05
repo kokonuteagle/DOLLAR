@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026-04-05 달러 유동성 분석 보고서(예시)</title>
+  <title>2026-04-05 달러 유동성 분석 보고서</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -11,79 +11,80 @@
   <style>
     body { font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     .num { font-variant-numeric: tabular-nums; }
+    canvas { image-rendering: -webkit-optimize-contrast; }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-900">
-  <div class="max-w-6xl mx-auto px-4 py-4 md:px-8 md:py-8 space-y-6">
-    <section class="rounded-3xl bg-slate-950 text-white shadow-lg overflow-hidden">
-      <div class="px-5 py-5 md:px-8 md:py-7">
-        <div class="flex flex-col gap-5">
+  <div class="max-w-6xl mx-auto px-3 py-3 md:px-8 md:py-8 space-y-4 md:space-y-6">
+    <section class="rounded-3xl bg-white shadow-sm border border-slate-200 overflow-hidden">
+      <div class="px-4 py-4 md:px-8 md:py-7">
+        <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
             <div>
-              <p class="text-xs font-semibold tracking-[0.18em] uppercase text-slate-400">USD Liquidity Analysis</p>
-              <h1 class="mt-2 text-2xl md:text-4xl font-semibold tracking-tight">2026-04-05 달러 유동성 분석 보고서(샘플!!!)</h1>
-              <p class="mt-3 text-sm md:text-base text-slate-300 leading-relaxed">표면 금리는 높지만 자금 배관은 급격히 조이지 않음. 최근 구간은 준비금 급감보다 <span class="font-semibold text-white">TGA 하락과 자금 재배치</span>가 더 중요하다.</p>
+              <p class="text-[11px] font-semibold tracking-[0.16em] uppercase text-slate-500">USD Liquidity Analysis</p>
+              <h1 class="mt-1 text-2xl md:text-4xl font-semibold tracking-tight text-slate-900">2026-04-05 달러 유동성 분석 보고서</h1>
+              <p class="mt-2 text-sm md:text-base text-slate-600 leading-relaxed">현재 위험자산에는 <span class="font-semibold text-slate-900">약한 순풍</span>. 최근 구간은 준비금 급감보다 <span class="font-semibold text-slate-900">TGA 하락과 자금 재배치</span>가 더 중요하다.</p>
             </div>
             <div class="flex-shrink-0">
-              <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 px-4 py-2 text-sm font-semibold">+1 약한 순풍</span>
+              <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 px-3 py-1.5 text-sm font-semibold">+1 약한 순풍</span>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 text-xs md:text-sm">
-            <span class="rounded-full border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300">관심 자산 · broad risk assets</span>
-            <span class="rounded-full border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300">시간축 · 1주 / 1개월 / 1분기</span>
-            <span class="rounded-full border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300">핵심 자금 이동 · TGA ↓ / reserves ↔ / ON RRP ↔</span>
+          <div class="flex flex-wrap gap-2 text-[11px] md:text-sm">
+            <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-slate-600">관심 자산 · broad risk assets</span>
+            <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-slate-600">시간축 · 1주 / 1개월 / 1분기</span>
+            <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-slate-600">자금 이동 · TGA ↓ / reserves ↔ / ON RRP ↔</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-              <p class="text-xs text-slate-400">가장 크게 작동 중</p>
-              <p class="mt-2 text-sm md:text-base font-medium text-white">재무부 현금잔고 하락이 최근 1주 완화 요인</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3.5">
+              <p class="text-[11px] text-slate-500">가장 크게 작동 중</p>
+              <p class="mt-1.5 text-sm md:text-base font-medium text-slate-900">재무부 현금잔고 하락이 최근 1주 완화 요인</p>
             </div>
-            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-              <p class="text-xs text-slate-400">돈이 이동하는 방향</p>
-              <p class="mt-2 text-sm md:text-base font-medium text-white">민간 → 정부 흡수보다, 최근엔 정부 → 민간 환류 쪽</p>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3.5">
+              <p class="text-[11px] text-slate-500">자금 이동 방향</p>
+              <p class="mt-1.5 text-sm md:text-base font-medium text-slate-900">정부 계정에서 민간 쪽으로 일부 환류</p>
             </div>
-            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-              <p class="text-xs text-slate-400">지금 바로 볼 숫자</p>
-              <p class="mt-2 text-sm md:text-base font-medium text-white">Reserves, TGA, SOFR-IORB</p>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3.5">
+              <p class="text-[11px] text-slate-500">지금 바로 체크할 숫자</p>
+              <p class="mt-1.5 text-sm md:text-base font-medium text-slate-900">Reserves · TGA · SOFR-IORB</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-3">
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs text-slate-500">Reserve balances</p>
-              <p class="mt-2 text-xl md:text-2xl font-semibold text-slate-900 num">+32.8bn</p>
-              <p class="mt-1 text-xs text-slate-500">1주 변화 · Fed H.4.1 · 2026-04-01 / 주간</p>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+              <p class="text-[10px] text-slate-500">Reserve balances</p>
+              <p class="mt-1 text-lg md:text-2xl font-semibold text-slate-900 num">+32.8bn</p>
+              <p class="mt-1 text-[10px] text-slate-500 leading-snug">1주 변화 · Fed H.4.1</p>
             </div>
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs text-slate-500">TGA</p>
-              <p class="mt-2 text-xl md:text-2xl font-semibold text-slate-900 num">-26.4bn</p>
-              <p class="mt-1 text-xs text-slate-500">1주 변화 · Fed H.4.1 · 2026-04-01 / 주간</p>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+              <p class="text-[10px] text-slate-500">TGA</p>
+              <p class="mt-1 text-lg md:text-2xl font-semibold text-slate-900 num">-26.4bn</p>
+              <p class="mt-1 text-[10px] text-slate-500 leading-snug">1주 변화 · Fed H.4.1</p>
             </div>
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs text-slate-500">SOFR - IORB</p>
-              <p class="mt-2 text-xl md:text-2xl font-semibold text-slate-900 num">0bp</p>
-              <p class="mt-1 text-xs text-slate-500">NY Fed / Board · 2026-04-01~04-03 / 일간</p>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+              <p class="text-[10px] text-slate-500">SOFR-IORB</p>
+              <p class="mt-1 text-lg md:text-2xl font-semibold text-slate-900 num">0bp</p>
+              <p class="mt-1 text-[10px] text-slate-500 leading-snug">일간 · NY Fed / Board</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <h2 class="text-lg font-semibold text-slate-900">시장에 도움이 되는 쪽</h2>
-        <ul class="mt-3 space-y-2 text-sm leading-relaxed text-slate-600 list-disc pl-5">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <h2 class="text-base font-semibold text-slate-900">도움이 되는 쪽</h2>
+        <ul class="mt-2.5 space-y-1.5 text-[13px] leading-relaxed text-slate-600 list-disc pl-4">
           <li>준비금이 최근 1주·1개월 기준 실제로 무너지지 않음</li>
           <li>TGA 하락으로 민간 자금이 최근 구간 다시 풀리는 흐름</li>
           <li>repo 금리와 기준 corridor가 매우 안정적</li>
           <li>최근 1주 금리 하락과 크레딧 스프레드 축소가 동반</li>
         </ul>
       </div>
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <h2 class="text-lg font-semibold text-slate-900">시장에 부담이 되는 쪽</h2>
-        <ul class="mt-3 space-y-2 text-sm leading-relaxed text-slate-600 list-disc pl-5">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <h2 class="text-base font-semibold text-slate-900">부담이 되는 쪽</h2>
+        <ul class="mt-2.5 space-y-1.5 text-[13px] leading-relaxed text-slate-600 list-disc pl-4">
           <li>bill issuance는 여전히 크고, 공급 흡수 부담은 계속 남아 있음</li>
           <li>ON RRP 잔고는 최근 줄지 않아 “대규모 유동성 공급” 그림은 약함</li>
           <li>달러는 1개월 기준 강세여서 글로벌 달러 조달엔 우호적이지 않음</li>
@@ -92,347 +93,331 @@
       </div>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold">최근 5주 자금 잔고</h2>
-          <span class="text-xs text-slate-500">주간</span>
+    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">자금 잔고 경로</h2>
+          <span class="text-[10px] text-slate-500">최근 5주</span>
         </div>
-        <p class="mt-1 text-sm text-slate-500">Reserves는 대체로 유지, TGA는 최근 하락, ON RRP는 정체에 가깝다.</p>
-        <div class="mt-4 h-72"><canvas id="lineChart"></canvas></div>
-        <p class="mt-3 text-xs text-slate-500">Source · Federal Reserve H.4.1 (Mar 4, Mar 11, Mar 18, Mar 25, Apr 1 2026 as of)</p>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">준비금이 실제로 빠지는지, 아니면 TGA·ON RRP 재배치인지 보여준다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="pathChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">Fed H.4.1 · Mar 4 ~ Apr 1 2026 as of · 주간</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold">6개 레이어 점수</h2>
-          <span class="text-xs text-slate-500">점수 비교</span>
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">준비금 변화 브리지</h2>
+          <span class="text-[10px] text-slate-500">1주 기여분</span>
         </div>
-        <p class="mt-1 text-sm text-slate-500">배관 안정은 플러스, 공급 부담과 글로벌 달러는 중립에 가깝다.</p>
-        <div class="mt-4 h-72"><canvas id="barChart"></canvas></div>
-        <p class="mt-3 text-xs text-slate-500">Score scale · -2 강한 역풍 ~ +2 강한 순풍</p>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">어떤 항목이 최근 1주 준비금 증가를 만들었는지 보여준다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="bridgeChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">Fed H.4.1 기반 분해 · 2026-03-25 → 2026-04-01 · 주간</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between">
-          <h2 class="text-lg font-semibold">최근 발행 구조</h2>
-          <span class="text-xs text-slate-500">4/2 공고</span>
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">자금시장 구현 상태</h2>
+          <span class="text-[10px] text-slate-500">일간</span>
         </div>
-        <p class="mt-1 text-sm text-slate-500">bill 비중이 가장 크다. 중개 여력과 자금 흡수 구조를 계속 확인해야 한다.</p>
-        <div class="mt-4 h-72"><canvas id="donutChart"></canvas></div>
-        <p class="mt-3 text-xs text-slate-500">Source · U.S. Treasury Auctions API · announcement date 2026-04-02</p>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">SOFR, EFFR, OBFR, IORB를 같이 보면 배관이 조이는지 읽힌다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="moneyMarketChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">NY Fed / Board via FRED (secondary) · 2026-04-01~04-03 · 일간</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">재무부 발행 구조</h2>
+          <span class="text-[10px] text-slate-500">4/2 공고</span>
+        </div>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">bill 중심 조달 구조가 민간 현금 흡수 압력의 핵심이다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="issuanceChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">U.S. Treasury Auctions API · 2026-04-02 · 주간</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">6개 레이어 비교</h2>
+          <span class="text-[10px] text-slate-500">점수</span>
+        </div>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">현재 순풍/역풍이 어디서 오는지 한 번에 비교한다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="layerChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">Scale · -2 강한 역풍 ~ +2 강한 순풍</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-base font-semibold">시장 체감 여건</h2>
+          <span class="text-[10px] text-slate-500">1주 변화</span>
+        </div>
+        <p class="mt-1 text-[12px] leading-relaxed text-slate-500">금리·크레딧·달러 방향을 같이 보면 체감 여건이 읽힌다.</p>
+        <div class="mt-3 h-56 md:h-64"><canvas id="conditionsChart"></canvas></div>
+        <p class="mt-2 text-[10px] leading-snug text-slate-500">Treasury / ICE BofA / Fed via FRED (secondary) · 최근 1주</p>
       </div>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <h2 class="text-xl font-semibold text-slate-900">Data clock</h2>
-      <p class="mt-2 text-sm text-slate-500">공식 데이터와 시장 데이터 시계는 분리했다.</p>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700">
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest daily market date</span><br>2026-04-03 전후 · 일간</div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest H.4.1</span><br>2026-04-01 as of / 2026-04-02 release · 주간</div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest DTS</span><br>2026-04-02 · 일간</div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest primary dealer date</span><br>2026-04-02 업데이트 / prior week · 주간</div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest NFCI</span><br>week ending 2026-03-27 · 주간</div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><span class="font-semibold text-slate-900">latest MMF / OFR / BIS</span><br>repo 1~2영업일 지연 / MMF 월간 / BIS GLI 이번 런에선 확인 불가</div>
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-lg font-semibold text-slate-900">Data clock</h2>
+      <p class="mt-1.5 text-[12px] text-slate-500">공식 데이터와 시장 데이터 시계는 분리했다.</p>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2.5 text-[12px] text-slate-700">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest daily market date</span><br>2026-04-03 전후 · 일간</div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest H.4.1</span><br>2026-04-01 as of / 2026-04-02 release · 주간</div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest DTS</span><br>2026-04-02 · 일간</div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest primary dealer date</span><br>2026-04-02 업데이트 / prior week · 주간</div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest NFCI</span><br>week ending 2026-03-27 · 주간</div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-3"><span class="font-semibold text-slate-900">latest MMF / OFR / BIS</span><br>repo 1~2영업일 지연 / MMF 월간 / BIS GLI 이번 런에선 확인 불가</div>
       </div>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <div class="flex items-end justify-between gap-4">
-        <div>
-          <h2 class="text-xl font-semibold text-slate-900">Snapshot</h2>
-          <p class="mt-2 text-sm text-slate-500">핵심 수치와 시장 의미를 한 화면에 정리.</p>
-        </div>
-      </div>
-      <div class="overflow-x-auto mt-4">
-        <table class="min-w-[1080px] w-full text-sm">
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-lg font-semibold text-slate-900">Snapshot</h2>
+      <p class="mt-1.5 text-[12px] text-slate-500">핵심 수치와 시장 의미를 한 화면에 정리.</p>
+      <div class="overflow-x-auto mt-3">
+        <table class="min-w-[980px] w-full text-[12px] md:text-sm">
           <thead>
             <tr class="border-b border-slate-200 text-slate-500">
-              <th class="py-3 pr-4 text-left font-semibold">지표명</th>
-              <th class="py-3 px-4 text-right font-semibold">최신값</th>
-              <th class="py-3 px-4 text-right font-semibold">직전 대비</th>
-              <th class="py-3 px-4 text-right font-semibold">1개월 방향</th>
-              <th class="py-3 px-4 text-left font-semibold">날짜/빈도</th>
-              <th class="py-3 px-4 text-left font-semibold">출처</th>
-              <th class="py-3 pl-4 text-left font-semibold">시장 의미</th>
+              <th class="py-2.5 pr-3 text-left font-semibold">지표명</th>
+              <th class="py-2.5 px-3 text-right font-semibold">최신값</th>
+              <th class="py-2.5 px-3 text-right font-semibold">직전 대비</th>
+              <th class="py-2.5 px-3 text-right font-semibold">1개월 방향</th>
+              <th class="py-2.5 px-3 text-left font-semibold">날짜/빈도</th>
+              <th class="py-2.5 px-3 text-left font-semibold">출처</th>
+              <th class="py-2.5 pl-3 text-left font-semibold">시장 의미</th>
             </tr>
           </thead>
           <tbody class="text-slate-700">
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">Reserve balances</td><td class="py-3 px-4 text-right num">$3.027tn</td><td class="py-3 px-4 text-right num">+32.8bn</td><td class="py-3 px-4 text-right">소폭 증가</td><td class="py-3 px-4">2026-04-01 / 주간</td><td class="py-3 px-4">Fed H.4.1</td><td class="py-3 pl-4">준비금 급감이 아니라 유지에 가깝다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">ON RRP</td><td class="py-3 px-4 text-right num">$332.9bn</td><td class="py-3 px-4 text-right num">+2.0bn</td><td class="py-3 px-4 text-right">소폭 증가</td><td class="py-3 px-4">2026-04-01 / 주간</td><td class="py-3 px-4">Fed H.4.1</td><td class="py-3 pl-4">자금이 대거 시장으로 풀리는 국면은 아니다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">TGA</td><td class="py-3 px-4 text-right num">$847.7bn</td><td class="py-3 px-4 text-right num">-26.4bn</td><td class="py-3 px-4 text-right">1개월 기준 부담</td><td class="py-3 px-4">2026-04-01 / 주간</td><td class="py-3 px-4">Fed H.4.1</td><td class="py-3 pl-4">최근 1주엔 민간으로 현금이 다시 나왔다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">TGA opening balance</td><td class="py-3 px-4 text-right num">$803.6bn</td><td class="py-3 px-4 text-right num">-19.5bn vs 3/27</td><td class="py-3 px-4 text-right num">-43.4bn vs 3/5</td><td class="py-3 px-4">2026-04-02 / 일간</td><td class="py-3 px-4">Treasury DTS API</td><td class="py-3 pl-4">일간 시계로도 최근 구간은 완화 방향이다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">Bills / Notes / Bonds 공고</td><td class="py-3 px-4 text-right num">236 / 97 / 22bn</td><td class="py-3 px-4 text-right">—</td><td class="py-3 px-4 text-right">3/5와 유사</td><td class="py-3 px-4">2026-04-02 / 주간</td><td class="py-3 px-4">Treasury Auctions API</td><td class="py-3 pl-4">발행 구조는 여전히 bill 중심이다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">SOFR / IORB</td><td class="py-3 px-4 text-right num">3.65 / 3.65%</td><td class="py-3 px-4 text-right num">0bp spread</td><td class="py-3 px-4 text-right">안정</td><td class="py-3 px-4">2026-04-01~04-03 / 일간</td><td class="py-3 px-4">NY Fed / Board via FRED (secondary)</td><td class="py-3 pl-4">자금 배관 stress는 약하다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">NFCI</td><td class="py-3 px-4 text-right num">-0.43</td><td class="py-3 px-4 text-right">덜 느슨</td><td class="py-3 px-4 text-right">2월말보다 덜 완화</td><td class="py-3 px-4">week ending 2026-03-27</td><td class="py-3 px-4">Chicago Fed</td><td class="py-3 pl-4">그래도 평균보다 느슨한 금융여건이다.</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-3 pr-4 font-medium">2Y / 10Y UST</td><td class="py-3 px-4 text-right num">3.79% / 4.31%</td><td class="py-3 px-4 text-right num">-9bp / -13bp</td><td class="py-3 px-4 text-right">1개월보단 높음</td><td class="py-3 px-4">2026-04-02 / 일간</td><td class="py-3 px-4">Treasury via FRED (secondary)</td><td class="py-3 pl-4">최근 1주만 보면 금리 부담은 완화됐다.</td></tr>
-            <tr><td class="py-3 pr-4 font-medium">IG / HY OAS</td><td class="py-3 px-4 text-right num">0.86% / 3.17%</td><td class="py-3 px-4 text-right num">-5bp / -25bp</td><td class="py-3 px-4 text-right">혼합</td><td class="py-3 px-4">2026-04-02 / 일간</td><td class="py-3 px-4">ICE BofA via FRED (secondary)</td><td class="py-3 pl-4">크레딧 체감은 최근 1주 분명히 편해졌다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">Reserve balances</td><td class="py-2.5 px-3 text-right num">$3.027tn</td><td class="py-2.5 px-3 text-right num">+32.8bn</td><td class="py-2.5 px-3 text-right">소폭 증가</td><td class="py-2.5 px-3">2026-04-01 / 주간</td><td class="py-2.5 px-3">Fed H.4.1</td><td class="py-2.5 pl-3">준비금 급감이 아니라 유지에 가깝다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">ON RRP</td><td class="py-2.5 px-3 text-right num">$332.9bn</td><td class="py-2.5 px-3 text-right num">+2.0bn</td><td class="py-2.5 px-3 text-right">소폭 증가</td><td class="py-2.5 px-3">2026-04-01 / 주간</td><td class="py-2.5 px-3">Fed H.4.1</td><td class="py-2.5 pl-3">대규모 유동성 공급 해석은 약하다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">TGA</td><td class="py-2.5 px-3 text-right num">$847.7bn</td><td class="py-2.5 px-3 text-right num">-26.4bn</td><td class="py-2.5 px-3 text-right">1개월 기준 부담</td><td class="py-2.5 px-3">2026-04-01 / 주간</td><td class="py-2.5 px-3">Fed H.4.1</td><td class="py-2.5 pl-3">최근 1주엔 민간으로 현금이 다시 나왔다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">Bills / Notes / Bonds 공고</td><td class="py-2.5 px-3 text-right num">236 / 97 / 22bn</td><td class="py-2.5 px-3 text-right">—</td><td class="py-2.5 px-3 text-right">3/5와 유사</td><td class="py-2.5 px-3">2026-04-02 / 주간</td><td class="py-2.5 px-3">Treasury Auctions API</td><td class="py-2.5 pl-3">발행 구조는 여전히 bill 중심이다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">SOFR / EFFR / OBFR / IORB</td><td class="py-2.5 px-3 text-right num">3.65 / 3.64 / 3.64 / 3.65%</td><td class="py-2.5 px-3 text-right num">거의 변화 없음</td><td class="py-2.5 px-3 text-right">안정</td><td class="py-2.5 px-3">2026-04-01~04-03 / 일간</td><td class="py-2.5 px-3">NY Fed / Board via FRED</td><td class="py-2.5 pl-3">자금 배관 stress는 약하다.</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-2.5 pr-3 font-medium">NFCI</td><td class="py-2.5 px-3 text-right num">-0.43</td><td class="py-2.5 px-3 text-right">덜 느슨</td><td class="py-2.5 px-3 text-right">2월말보다 덜 완화</td><td class="py-2.5 px-3">2026-03-27 주간</td><td class="py-2.5 px-3">Chicago Fed</td><td class="py-2.5 pl-3">여전히 평균보다 느슨한 금융여건이다.</td></tr>
+            <tr><td class="py-2.5 pr-3 font-medium">IG / HY OAS</td><td class="py-2.5 px-3 text-right num">0.86% / 3.17%</td><td class="py-2.5 px-3 text-right num">-5bp / -25bp</td><td class="py-2.5 px-3 text-right">혼합</td><td class="py-2.5 px-3">2026-04-02 / 일간</td><td class="py-2.5 px-3">ICE BofA via FRED</td><td class="py-2.5 pl-3">크레딧 체감은 최근 1주 분명히 편해졌다.</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Fed balance sheet</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-500">준비금 변화는 먼저 회계 브릿지로 본다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
-          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">Reserve balances $3.027tn, ON RRP $332.9bn, TGA $847.7bn, total factors supplying reserve funds $6.719tn.</p></div>
-          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">1주 reserves +32.8bn, 1개월 +11.2bn. 최근 구간은 reserve drain보다 유지에 가깝다.</p></div>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Fed balance sheet</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">준비금 변화는 회계 브릿지로 먼저 본다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
+          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">Reserve balances $3.027tn, ON RRP $332.9bn, TGA $847.7bn.</p></div>
+          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">1주 reserves +32.8bn, 1개월 +11.2bn.</p></div>
           <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">자산 측 증가와 TGA 하락이 ON RRP·currency drain을 상쇄했다.</p></div>
           <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">준비금이 실제로 무너지지 않으면 funding panic 가능성은 낮아진다.</p></div>
         </div>
+        <div class="mt-4 grid grid-cols-3 gap-2 text-[11px]"><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">Reserves</div><div class="mt-1 font-semibold text-slate-900 num">+32.8bn</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">TGA</div><div class="mt-1 font-semibold text-slate-900 num">-26.4bn</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">ON RRP</div><div class="mt-1 font-semibold text-slate-900 num">+2.0bn</div></div></div>
       </article>
 
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Money markets / repo</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-500">배관 stress는 rate spread가 먼저 알려준다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Money markets / repo</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">배관 stress는 rate spread가 먼저 알려준다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
           <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">SOFR 3.65, EFFR 3.64, OBFR 3.64, IORB 3.65.</p></div>
-          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">SOFR-IORB 0bp, EFFR-IORB -1bp, OBFR-IORB -1bp. corridor는 매우 안정적이다.</p></div>
-          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">ceiling/floor를 두드릴 정도의 자금 스트레스가 관찰되지 않는다.</p></div>
+          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">SOFR-IORB 0bp, EFFR-IORB -1bp, OBFR-IORB -1bp.</p></div>
+          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">corridor를 깨는 stress가 관찰되지 않는다.</p></div>
           <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">배관이 멀쩡하면 중개 병목이 시장 전체로 번질 가능성이 낮다.</p></div>
         </div>
+        <div class="mt-4 grid grid-cols-3 gap-2 text-[11px]"><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">SOFR-IORB</div><div class="mt-1 font-semibold text-slate-900 num">0bp</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">EFFR-IORB</div><div class="mt-1 font-semibold text-slate-900 num">-1bp</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">OBFR-IORB</div><div class="mt-1 font-semibold text-slate-900 num">-1bp</div></div></div>
       </article>
 
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Treasury cash & debt</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-slate-100 text-slate-700">0 중립</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-500">재무부 현금잔고와 발행 구조가 자금 흐름을 바꾼다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
-          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">DTS 기준 TGA opening balance는 4/2에 $803.6bn. 최근 공고는 bill $236bn, note $97bn, bond $22bn.</p></div>
-          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">최근 1주는 TGA 하락으로 완화. 다만 bill supply는 계속 높은 편이다.</p></div>
-          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">발행 구조는 여전히 bill 중심이지만, 최근 한 달 ON RRP가 줄지 않아 단순한 ON RRP→bill 회전으로 보긴 어렵다.</p></div>
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Treasury cash & debt</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-slate-100 text-slate-700">0 중립</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">재무부 현금잔고와 발행 구조가 자금 흐름을 바꾼다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
+          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">4/2 공고 기준 bill $236bn, note $97bn, bond $22bn.</p></div>
+          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">최근 1주는 TGA 하락으로 완화. 다만 bill supply는 계속 높다.</p></div>
+          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">발행 구조는 여전히 bill 중심이다.</p></div>
           <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">단기적으로는 완화, 중기적으로는 공급 부담이 남는다.</p></div>
         </div>
+        <div class="mt-4 grid grid-cols-3 gap-2 text-[11px]"><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">Bills</div><div class="mt-1 font-semibold text-slate-900 num">236bn</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">Notes</div><div class="mt-1 font-semibold text-slate-900 num">97bn</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">Bonds</div><div class="mt-1 font-semibold text-slate-900 num">22bn</div></div></div>
       </article>
 
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Bank & dealer capacity</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-slate-100 text-slate-700">0 중립</span>
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Bank & dealer capacity</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-slate-100 text-slate-700">0 중립</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">국채를 받아줄 중개 여력이 실제 병목이다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
+          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">Primary dealer 통계는 업데이트 구조만 확인. exact inventory/fails는 미확인.</p></div>
+          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">repo dislocation이나 emergency facility 사용은 강하게 보이지 않는다.</p></div>
+          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">공급 부담은 있지만 아직 소화 불능 신호는 약하다.</p></div>
+          <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">현재는 중립. inventory/fails가 뛰면 해석을 바꿔야 한다.</p></div>
         </div>
-        <p class="mt-2 text-sm text-slate-500">국채를 받아줄 중개 여력이 실제 병목이다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
-          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">Primary dealer 통계는 업데이트 구조만 확인. exact inventory/fails는 이번 런에서 미확인.</p></div>
-          <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">repo rate dislocation이나 emergency facility 사용은 강하게 보이지 않는다.</p></div>
-          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">공급 부담은 있지만 아직 시장이 소화 불능 신호를 보내는 단계는 아니다.</p></div>
-          <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">현재는 중립. 다만 inventory/fails가 뛰면 바로 해석을 바꿔야 한다.</p></div>
-        </div>
+        <div class="mt-4 rounded-xl bg-amber-50 border border-amber-200 p-2.5 text-[11px] text-amber-800">확인 불가 · exact dealer inventory / fails series timestamp</div>
       </article>
 
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Financial conditions</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-500">정책금리 수준보다 시장이 느끼는 자금 여건이 중요하다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
-          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">NFCI -0.43, 2Y 3.79%, 10Y 4.31%, IG 0.86%, HY 3.17%, broad dollar 120.89.</p></div>
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Financial conditions</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-emerald-100 text-emerald-700">+1 약한 순풍</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">정책금리보다 시장이 느끼는 자금 여건이 중요하다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
+          <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">NFCI -0.43, 2Y 3.79%, 10Y 4.31%, IG 0.86%, HY 3.17%.</p></div>
           <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">최근 1주 기준 금리 하락과 크레딧 완화가 동시에 나타났다.</p></div>
-          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">국내 funding stress가 없고, 최근 rates/spreads가 risk assets에 우호적으로 움직였다.</p></div>
+          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">최근 rates/spreads가 risk assets에 우호적으로 움직였다.</p></div>
           <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">체감 유동성은 최근 1주 분명히 완화 쪽이다.</p></div>
         </div>
+        <div class="mt-4 grid grid-cols-4 gap-2 text-[11px]"><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">2Y</div><div class="mt-1 font-semibold text-slate-900 num">-9bp</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">10Y</div><div class="mt-1 font-semibold text-slate-900 num">-13bp</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">IG</div><div class="mt-1 font-semibold text-slate-900 num">-5bp</div></div><div class="rounded-xl bg-slate-50 border border-slate-200 p-2.5"><div class="text-slate-500">HY</div><div class="mt-1 font-semibold text-slate-900 num">-25bp</div></div></div>
       </article>
 
-      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Global dollar liquidity</h2>
-          <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold bg-slate-100 text-slate-700">0 중립</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-500">미국 내 준비금과 글로벌 달러 조달은 동일하지 않다.</p>
-        <hr class="my-6 border-gray-200" />
-        <div class="space-y-4 text-sm leading-relaxed">
+      <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-base font-semibold">Global dollar liquidity</h2><span class="inline-flex items-center rounded-full px-3 py-1 text-[12px] font-semibold bg-slate-100 text-slate-700">0 중립</span></div>
+        <p class="mt-1 text-[12px] text-slate-500">미국 내 준비금과 글로벌 달러 조달은 동일하지 않다.</p>
+        <hr class="my-4 border-gray-200" />
+        <div class="space-y-3 text-[13px] leading-relaxed">
           <div><span class="font-semibold text-slate-900">최신 스냅샷</span><p class="mt-1 text-slate-600">BIS GLI 최신 분기 수치는 이번 런에서 미확인. broad dollar는 최근 1개월 강세.</p></div>
           <div><span class="font-semibold text-slate-900">최근 변화</span><p class="mt-1 text-slate-600">국내 배관은 안정적이지만, 달러 강세는 offshore 달러 조건엔 덜 우호적이다.</p></div>
-          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">글로벌 달러는 cross-border credit과 BIS 분기 데이터까지 확인해야 정확하다.</p></div>
+          <div><span class="font-semibold text-slate-900">왜 변했나</span><p class="mt-1 text-slate-600">글로벌 달러는 BIS 분기 데이터까지 봐야 정확하다.</p></div>
           <div><span class="font-semibold text-slate-900">시장 의미</span><p class="mt-1 text-slate-600">국내 risk assets 순풍이 곧 글로벌 순풍을 뜻하진 않는다.</p></div>
         </div>
+        <div class="mt-4 rounded-xl bg-amber-50 border border-amber-200 p-2.5 text-[11px] text-amber-800">확인 불가 · BIS GLI 최신 분기 수치</div>
       </article>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <h2 class="text-xl font-semibold">Integrated judgment</h2>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <p class="text-sm font-semibold text-slate-900">회계상 유동성</p>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">최근 1주엔 완화가 분명하다. 최근 1개월은 asset 증가가 TGA·ON RRP·currency drain을 대체로 상쇄했다.</p>
-        </div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <p class="text-sm font-semibold text-slate-900">시장 체감 유동성</p>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">repo가 안정적이고, 최근 1주 금리와 스프레드가 완화됐다. 체감은 약한 easing 쪽이다.</p>
-        </div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <p class="text-sm font-semibold text-slate-900">위험자산 순효과</p>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600"><span class="font-semibold text-slate-900">+1 약한 순풍.</span> 다만 QE형 과잉유동성 장세로 해석할 단계는 아니다.</p>
-        </div>
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-lg font-semibold">Integrated judgment</h2>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">회계상 유동성</p><p class="mt-2 text-[13px] leading-relaxed text-slate-600">최근 1주엔 완화가 분명하다. 최근 1개월은 asset 증가가 TGA·ON RRP·currency drain을 대체로 상쇄했다.</p></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">시장 체감 유동성</p><p class="mt-2 text-[13px] leading-relaxed text-slate-600">repo가 안정적이고, 최근 1주 금리와 스프레드가 완화됐다. 체감은 약한 easing 쪽이다.</p></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">위험자산 순효과</p><p class="mt-2 text-[13px] leading-relaxed text-slate-600"><span class="font-semibold text-slate-900">+1 약한 순풍.</span> 다만 QE형 과잉유동성 장세로 해석할 단계는 아니다.</p></div>
       </div>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <h2 class="text-xl font-semibold">Scenario map</h2>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <h3 class="font-semibold text-slate-900">기본 시나리오</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">QT headline은 유지되지만 plumbing은 안정. reserves는 flat~slightly up.</p>
-          <div class="mt-3 text-sm text-slate-700"><span class="font-semibold">촉발 변수</span> · TGA 관리, repo 안정</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">먼저 볼 데이터</span> · H.4.1 reserves / DTS TGA / SOFR-IORB</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">전달 경로</span> · funding 안정 → risk assets 완만한 지지</div>
-        </div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <h3 class="font-semibold text-slate-900">유동성 개선</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">TGA 추가 하락과 ON RRP 감소, 금리 하락이 겹치면 순풍이 강화된다.</p>
-          <div class="mt-3 text-sm text-slate-700"><span class="font-semibold">촉발 변수</span> · TGA drawdown / ON RRP runoff</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">먼저 볼 데이터</span> · DTS TGA / H.4.1 ON RRP / HY OAS</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">전달 경로</span> · cash 환류 → rates·credit 동반 완화</div>
-        </div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
-          <h3 class="font-semibold text-slate-900">유동성 악화</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">TGA 재상승과 대규모 공급, repo spread 이탈이 나오면 역풍으로 전환된다.</p>
-          <div class="mt-3 text-sm text-slate-700"><span class="font-semibold">촉발 변수</span> · TGA rebuild / supply stress</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">먼저 볼 데이터</span> · reserves / auction sizes / SOFR-EFFR</div>
-          <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">전달 경로</span> · 변동성 확대 → credit 악화 → risk assets 압박</div>
-        </div>
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-lg font-semibold">Scenario map</h2>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><h3 class="font-semibold text-slate-900 text-[14px]">기본 시나리오</h3><p class="mt-2 text-[13px] leading-relaxed text-slate-600">QT headline은 유지되지만 plumbing은 안정. reserves는 flat~slightly up.</p><div class="mt-2 text-[12px] text-slate-700"><span class="font-semibold">촉발</span> · TGA 관리, repo 안정</div><div class="mt-1.5 text-[12px] text-slate-700"><span class="font-semibold">체크</span> · H.4.1 reserves / DTS TGA / SOFR-IORB</div></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><h3 class="font-semibold text-slate-900 text-[14px]">유동성 개선</h3><p class="mt-2 text-[13px] leading-relaxed text-slate-600">TGA 추가 하락과 ON RRP 감소, 금리 하락이 겹치면 순풍이 강화된다.</p><div class="mt-2 text-[12px] text-slate-700"><span class="font-semibold">촉발</span> · TGA drawdown / ON RRP runoff</div><div class="mt-1.5 text-[12px] text-slate-700"><span class="font-semibold">체크</span> · DTS TGA / H.4.1 ON RRP / HY OAS</div></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><h3 class="font-semibold text-slate-900 text-[14px]">유동성 악화</h3><p class="mt-2 text-[13px] leading-relaxed text-slate-600">TGA 재상승과 대규모 공급, repo spread 이탈이 나오면 역풍으로 전환된다.</p><div class="mt-2 text-[12px] text-slate-700"><span class="font-semibold">촉발</span> · TGA rebuild / supply stress</div><div class="mt-1.5 text-[12px] text-slate-700"><span class="font-semibold">체크</span> · reserves / auction sizes / SOFR-EFFR</div></div>
       </div>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <h2 class="text-xl font-semibold">Next checkpoints</h2>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-sm font-semibold text-slate-900">매일</p><p class="mt-2 text-sm text-slate-600">DTS TGA, SOFR/EFFR, 2Y/10Y, credit spreads</p></div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-sm font-semibold text-slate-900">매주</p><p class="mt-2 text-sm text-slate-600">H.4.1, primary dealer stats, OFR repo data</p></div>
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-sm font-semibold text-slate-900">분기</p><p class="mt-2 text-sm text-slate-600">BIS GLI, TBAC/refunding, reserve preference survey</p></div>
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-lg font-semibold">Next checkpoints</h2>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">매일</p><p class="mt-1.5 text-[13px] text-slate-600">DTS TGA, SOFR/EFFR, 2Y/10Y, credit spreads</p></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">매주</p><p class="mt-1.5 text-[13px] text-slate-600">H.4.1, primary dealer stats, OFR repo data</p></div>
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4"><p class="text-[13px] font-semibold text-slate-900">분기</p><p class="mt-1.5 text-[13px] text-slate-600">BIS GLI, TBAC/refunding, reserve preference survey</p></div>
       </div>
     </section>
 
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
-      <h2 class="text-lg font-semibold text-slate-900">Sources</h2>
-      <p class="mt-3 text-sm leading-relaxed text-slate-600">
-        Primary · Federal Reserve H.4.1, U.S. Treasury Daily Treasury Statement API, U.S. Treasury Auctions API, Chicago Fed NFCI, Federal Reserve H.10, OFR Short-term Funding Monitor, NY Fed reference-rates pages, NY Fed primary dealer statistics page.<br />
-        Secondary · FRED distributions used for SOFR, EFFR, OBFR, IORB, U.S. Treasury yields, broad dollar index, ICE BofA IG/HY OAS where direct machine-readable pulls were not used in this run.<br />
-        Timestamp · 2026-04-05 Asia/Seoul.
-      </p>
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6">
+      <h2 class="text-base font-semibold text-slate-900">Sources</h2>
+      <p class="mt-2 text-[12px] leading-relaxed text-slate-600">Primary · Federal Reserve H.4.1, U.S. Treasury DTS API, U.S. Treasury Auctions API, Chicago Fed NFCI, Federal Reserve H.10, OFR STFM, NY Fed reference-rates pages, NY Fed primary dealer page.<br />Secondary · FRED distributions used for SOFR, EFFR, OBFR, IORB, Treasury yields, broad dollar index, ICE BofA IG/HY OAS where direct machine-readable pulls were not used in this run.<br />Timestamp · 2026-04-05 Asia/Seoul.</p>
     </section>
   </div>
 
   <script>
     const slate = '#334155';
-    const slate300 = '#cbd5e1';
     const blue = '#2563eb';
     const emerald = '#059669';
     const amber = '#d97706';
+    const rose = '#e11d48';
     const teal = '#0f766e';
+    const gray = '#94a3b8';
 
-    const labels = ['3/4', '3/11', '3/18', '3/25', '4/1'];
-    const lineCtx = document.getElementById('lineChart');
-    new Chart(lineCtx, {
+    const commonPlugins = {
+      legend: { labels: { color: slate, boxWidth: 8, boxHeight: 8, font: { size: 10 }, padding: 8 } },
+      tooltip: { bodyFont: { size: 10 }, titleFont: { size: 10 }, padding: 8 }
+    };
+
+    new Chart(document.getElementById('pathChart'), {
       type: 'line',
       data: {
-        labels,
+        labels: ['3/4', '3/11', '3/18', '3/25', '4/1'],
         datasets: [
-          {
-            label: 'Reserves ($bn)',
-            data: [3015.531, 3037.665, 3019.995, 2993.955, 3026.708],
-            borderColor: blue,
-            backgroundColor: 'rgba(37, 99, 235, 0.08)',
-            tension: 0.35,
-            borderWidth: 2.5,
-            pointRadius: 2.5,
-            yAxisID: 'y'
-          },
-          {
-            label: 'ON RRP ($bn)',
-            data: [325.744, 319.021, 327.066, 330.872, 332.861],
-            borderColor: amber,
-            backgroundColor: 'rgba(217, 119, 6, 0.08)',
-            tension: 0.35,
-            borderWidth: 2,
-            pointRadius: 2,
-            yAxisID: 'y1'
-          },
-          {
-            label: 'TGA ($bn)',
-            data: [832.053, 838.186, 853.052, 874.077, 847.718],
-            borderColor: emerald,
-            backgroundColor: 'rgba(5, 150, 105, 0.08)',
-            tension: 0.35,
-            borderWidth: 2,
-            pointRadius: 2,
-            yAxisID: 'y1'
-          }
+          { label: 'Reserves($tn)', data: [3.0155, 3.0377, 3.0200, 2.9940, 3.0267], borderColor: blue, tension: .35, borderWidth: 2.2, pointRadius: 1.8 },
+          { label: 'ON RRP($bn)', data: [325.7, 319.0, 327.1, 330.9, 332.9], borderColor: amber, tension: .35, borderWidth: 1.8, pointRadius: 1.5, yAxisID: 'y1' },
+          { label: 'TGA($bn)', data: [832.1, 838.2, 853.1, 874.1, 847.7], borderColor: emerald, tension: .35, borderWidth: 1.8, pointRadius: 1.5, yAxisID: 'y1' }
         ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { labels: { boxWidth: 10, color: slate, font: { size: 11 } } },
-          tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.formattedValue}` } }
-        },
+        plugins: commonPlugins,
+        layout: { padding: { top: 4, right: 2, bottom: 0, left: 0 } },
         scales: {
-          x: { ticks: { color: slate }, grid: { color: '#f1f5f9' } },
-          y: { position: 'left', ticks: { color: slate }, grid: { color: '#e2e8f0' } },
-          y1: { position: 'right', ticks: { color: slate }, grid: { display: false } }
+          x: { ticks: { color: slate, font: { size: 10 }, maxRotation: 0, autoSkipPadding: 8 }, grid: { color: '#eef2f7' } },
+          y: { ticks: { color: slate, font: { size: 10 } }, grid: { color: '#e2e8f0' } },
+          y1: { position: 'right', ticks: { color: slate, font: { size: 10 } }, grid: { display: false } }
         }
       }
     });
 
-    const barCtx = document.getElementById('barChart');
-    new Chart(barCtx, {
+    new Chart(document.getElementById('bridgeChart'), {
       type: 'bar',
       data: {
-        labels: ['Fed BS', 'Money Mkt', 'Treasury', 'Dealer/Bank', 'Fin Cond', 'Global $'],
-        datasets: [{
-          label: 'Layer score',
-          data: [1, 1, 0, 0, 1, 0],
-          backgroundColor: ['#10b981', '#10b981', '#94a3b8', '#94a3b8', '#10b981', '#94a3b8'],
-          borderRadius: 8,
-          maxBarThickness: 42
-        }]
+        labels: ['Assets', 'TGA', 'ON RRP', 'Currency', 'Residual', 'Net'],
+        datasets: [{ data: [6.9, 26.4, -2.0, -3.2, 4.7, 32.8], backgroundColor: [blue, emerald, amber, rose, gray, teal], borderRadius: 6, maxBarThickness: 24 }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
+        plugins: { legend: { display: false }, tooltip: commonPlugins.tooltip },
         scales: {
-          x: { ticks: { color: slate, maxRotation: 0, minRotation: 0, font: { size: 11 } }, grid: { display: false } },
-          y: { min: -2, max: 2, ticks: { stepSize: 1, color: slate }, grid: { color: '#e2e8f0' } }
+          x: { ticks: { color: slate, font: { size: 10 }, maxRotation: 0, minRotation: 0 }, grid: { display: false } },
+          y: { ticks: { color: slate, font: { size: 10 }, callback: (v) => v + 'bn' }, grid: { color: '#e2e8f0' } }
         }
       }
     });
 
-    const donutCtx = document.getElementById('donutChart');
-    new Chart(donutCtx, {
-      type: 'doughnut',
+    new Chart(document.getElementById('moneyMarketChart'), {
+      type: 'bar',
       data: {
-        labels: ['Bills', 'Notes', 'Bonds'],
-        datasets: [{
-          data: [236, 97, 22],
-          backgroundColor: ['#0f766e', '#2563eb', '#d97706'],
-          borderColor: '#ffffff',
-          borderWidth: 2
-        }]
+        labels: ['SOFR', 'EFFR', 'OBFR', 'IORB', 'S-I(bp)', 'E-I(bp)'],
+        datasets: [{ data: [3.65, 3.64, 3.64, 3.65, 0, -1], backgroundColor: [blue, teal, teal, gray, emerald, amber], borderRadius: 6, maxBarThickness: 24 }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '62%',
-        plugins: {
-          legend: { position: 'bottom', labels: { color: slate, boxWidth: 12, font: { size: 11 } } }
+        plugins: { legend: { display: false }, tooltip: commonPlugins.tooltip },
+        scales: {
+          x: { ticks: { color: slate, font: { size: 10 }, maxRotation: 0, minRotation: 0 }, grid: { display: false } },
+          y: { ticks: { color: slate, font: { size: 10 } }, grid: { color: '#e2e8f0' } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('issuanceChart'), {
+      type: 'doughnut',
+      data: { labels: ['Bills', 'Notes', 'Bonds'], datasets: [{ data: [236, 97, 22], backgroundColor: [teal, blue, amber], borderColor: '#fff', borderWidth: 2 }] },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '66%',
+        plugins: { legend: { position: 'bottom', labels: { color: slate, boxWidth: 8, boxHeight: 8, font: { size: 10 }, padding: 8 } }, tooltip: commonPlugins.tooltip }
+      }
+    });
+
+    new Chart(document.getElementById('layerChart'), {
+      type: 'bar',
+      data: { labels: ['Fed BS', 'Money', 'Treasury', 'Dealer', 'FinCond', 'Global$'], datasets: [{ data: [1, 1, 0, 0, 1, 0], backgroundColor: ['#10b981', '#10b981', '#94a3b8', '#94a3b8', '#10b981', '#94a3b8'], borderRadius: 6, maxBarThickness: 18 }] },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: commonPlugins.tooltip },
+        scales: {
+          x: { min: -2, max: 2, ticks: { stepSize: 1, color: slate, font: { size: 10 } }, grid: { color: '#e2e8f0' } },
+          y: { ticks: { color: slate, font: { size: 10 } }, grid: { display: false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('conditionsChart'), {
+      type: 'bar',
+      data: { labels: ['2Y', '10Y', 'IG', 'HY', 'DXY'], datasets: [{ data: [-9, -13, -5, -25, 1.32], backgroundColor: ['#10b981', '#10b981', '#10b981', '#10b981', '#f59e0b'], borderRadius: 6, maxBarThickness: 24 }] },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: commonPlugins.tooltip },
+        scales: {
+          x: { ticks: { color: slate, font: { size: 10 }, maxRotation: 0, minRotation: 0 }, grid: { display: false } },
+          y: { ticks: { color: slate, font: { size: 10 } }, grid: { color: '#e2e8f0' } }
         }
       }
     });
