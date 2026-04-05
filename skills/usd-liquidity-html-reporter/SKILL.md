@@ -62,6 +62,8 @@ Use this skill in three modes:
 - Keep official-data dates distinct from daily market dates.
 - Treat dealer/bank capacity as a transmission bottleneck, not an afterthought.
 - Avoid bumper-sticker conclusions like `liquidity up = risk assets up`.
+- Make the chart section evidence-dense, not decorative.
+- When data are available, show visually: reserve path, reserve bridge/contribution, money-market implementation, Treasury funding structure, and six-layer comparison.
 - If a required series is missing, say `확인 불가` and identify why it matters.
 
 ## File outputs

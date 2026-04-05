@@ -77,22 +77,86 @@ So the hero section must include:
 9. Next checkpoints section
 10. Sources footer
 
+The dashboard chart section should sit above the fold on mobile as much as possible and must include the most decision-useful visuals first:
+- recent path / reserve bridge
+- money-market implementation
+- Treasury funding structure
+- six-layer score comparison
+
 ## Chart requirements
 Charts are mandatory when data are available.
-Use at least 3 chart cards when the data permit.
+The chart section must feel information-dense enough that a user can understand the liquidity regime from the visuals alone.
+Use at least **5 chart cards** when the data permit, not counting optional mini-sparklines inside cards.
 
-Preferred mapping:
-- line chart: reserves, ON RRP, TGA recent path
-- grouped bar chart: six-layer scores or key weekly/monthly changes
-- donut chart: bill/coupon mix or contribution mix, only when it is a valid composition
-- horizontal bar: scenario bias or transmission pressure ranking
+### Non-negotiable chart rule
+A chart is not decoration.
+Every chart must answer one concrete market question and must include:
+- what changed
+- over what time window
+- why that matters
 
-Chart rules:
+If a chart does not add information beyond a sentence, do not include it.
+
+### Required dashboard chart set when data are available
+1. **Recent path line chart**
+   - reserves, ON RRP, TGA over at least the latest 4-5 observations
+   - objective: show whether reserves are actually falling or whether the move is liability reallocation
+
+2. **Reserve-bridge / contribution chart**
+   - use waterfall, stacked bar, or grouped contribution bars
+   - decompose reserve change into Fed assets, TGA, ON RRP, currency, and residual/other when available
+   - objective: show what funded the move, not just that the move happened
+
+3. **Money-market implementation chart**
+   - show SOFR, EFFR, OBFR, IORB, and/or key spreads such as SOFR-IORB and EFFR-IORB
+   - objective: show whether plumbing is orderly or whether corridor pressure is emerging
+
+4. **Treasury funding structure chart**
+   - show bill vs coupon issuance mix, recent auction sizing, or TGA direction with issuance context
+   - objective: show how Treasury financing is interacting with private cash pools
+
+5. **Six-layer score chart**
+   - compare the six layers side by side
+   - objective: show where the active support/headwind is actually coming from
+
+### Strongly preferred additional charts
+- **Financial conditions chart**
+  - 2Y/10Y, IG/HY spreads, dollar direction, or a compact conditions dashboard
+- **Scenario/risk-balance chart**
+  - horizontal bars for base / improvement / deterioration transmission pressure
+- **Per-layer mini sparklines**
+  - add inside six-layer cards when a clean recent trend exists
+
+### Chart-type guidance
+- line chart: recent multi-period path
+- grouped bar chart: weekly vs monthly vs quarterly changes
+- waterfall / contribution bars: reserve bridge or funding source decomposition
+- donut chart: only for true composition views, such as bill/note/bond mix
+- horizontal bars: scenario bias, pressure ranking, or score distribution
+- sparkline: compact trend cue inside a card
+
+### Chart rules
 - mobile readable
 - legible labels without zoom
 - restrained institutional colors
-- short titles
+- short titles with explicit market question framing
 - no fake placeholder values
+- no charts with ambiguous units
+- annotate units clearly (`$bn`, `%`, `bp`, score)
+- show source/date/frequency in or directly below the card
+- if mixing official weekly data and daily market data, label the clocks clearly in the chart subtitle or footnote
+
+### Six-layer visual rule
+Each of the six-layer analysis cards should include a mini visual or compact metric strip when the underlying data are available.
+Examples:
+- Fed balance sheet card: reserves / ON RRP / TGA mini trend
+- money markets card: SOFR-IORB / EFFR-IORB spread strip
+- Treasury card: bill/coupon mix or TGA direction bar
+- dealer/bank card: inventory/capacity proxy bar or note when unavailable
+- financial conditions card: yields/spreads mini trend
+- global dollar card: dollar / BIS direction cue or explicit `확인 불가`
+
+If a layer lacks enough data for a chart, show a compact unavailable-state block that names the missing series and why they matter.
 
 ## Table rules
 Wrap every table in:
