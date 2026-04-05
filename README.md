@@ -13,8 +13,7 @@ OpenClaw용 **달러 유동성 HTML 보고서 스타터 리포지토리**.
 
 - 달러 유동성 리포트 1회 실행
 - 모바일에서 보기 쉬운 HTML 보고서 생성
-- `index.html` 최신본 유지
-- `reports/` 폴더에 날짜별 보고서 누적
+- `reports/` 폴더에 날짜별 HTML 보고서 누적
 - OpenClaw 크론으로 정기 보고서 자동화
 
 리포트 프레임은 아래 6개 레이어를 기준으로 동작한다.
@@ -67,7 +66,6 @@ dist/usd-liquidity-html-reporter.skill
 - 데이터 수집
 - 리포트 생성
 - HTML 렌더링
-- `index.html` 업데이트
 - `reports/YYYY-MM-DD_...html` 아카이브
 - 필요 시 git commit / push
 
@@ -78,7 +76,7 @@ dist/usd-liquidity-html-reporter.skill
 ## 포함 파일
 
 ### 루트
-- `index.html` — 최신 HTML 보고서
+- `index.html` — 예시/현재 스냅샷 HTML 보고서 (자동 갱신 대상 아님)
 - `reports/` — 날짜별 보고서 보관
 - `dist/usd-liquidity-html-reporter.skill` — 패키징된 skill 파일
 - `skills/usd-liquidity-html-reporter/` — 실제 OpenClaw skill 디렉터리

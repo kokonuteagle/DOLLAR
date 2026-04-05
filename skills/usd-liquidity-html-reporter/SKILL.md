@@ -6,7 +6,7 @@ description: Set up and run recurring or one-off USD liquidity plumbing reports 
 # USD Liquidity HTML Reporter
 
 ## Overview
-Create institution-style HTML liquidity reports from official data and automate recurring delivery with cron. On first-time setup, ask only for cadence/time if the user has not already given it. After that, create or update the recurring job, generate HTML reports, update the latest `index.html`, and archive dated copies under `reports/`.
+Create institution-style HTML liquidity reports from official data and automate recurring delivery with cron. On first-time setup, ask only for cadence/time if the user has not already given it. After that, create or update the recurring job, generate HTML reports, and archive dated copies under `reports/`.
 
 ## Quick start
 Use this skill in three modes:
@@ -18,7 +18,7 @@ Use this skill in three modes:
 
 2. **One-off run now**
    - Generate a fresh HTML report immediately.
-   - Save the dated file under `reports/` and refresh `index.html`.
+   - Save the dated file under `reports/`.
 
 3. **Refresh an existing setup**
    - Reuse the existing cadence, repo path, and report style.
@@ -50,7 +50,7 @@ Use this skill in three modes:
 
 5. **Generate the report**
    - Save the dated report as `reports/YYYY-MM-DD_usd_liquidity_analysis_report.html`.
-   - Refresh `index.html` with the latest report.
+   - Do not overwrite or periodically refresh `index.html` unless the user explicitly asks for a latest-report landing page.
    - If the repo is git-tracked, commit changes. Push if auth is available.
    - If push is unavailable, still write files and state that push/auth is pending.
 
@@ -67,9 +67,9 @@ Use this skill in three modes:
 ## File outputs
 Use these defaults unless the user asks otherwise:
 
-- Latest report: `index.html`
 - Archive copy: `reports/YYYY-MM-DD_usd_liquidity_analysis_report.html`
 - Skill spec: keep under `skills/usd-liquidity-html-reporter/`
+- `index.html` is optional and should stay untouched unless the user explicitly asks for a latest-report landing page.
 
 ## Delivery behavior
 - For interactive one-off runs, send the HTML file back to the user when possible.

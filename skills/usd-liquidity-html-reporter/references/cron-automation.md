@@ -13,8 +13,8 @@ Infer everything else unless ambiguous:
 - timezone: current session timezone
 - 관심 자산: broad risk assets unless specified
 - repo path: current repo root if available
-- latest report path: `index.html`
 - archive path: `reports/YYYY-MM-DD_usd_liquidity_analysis_report.html`
+- do not update `index.html` unless the user explicitly asks for a latest-report landing page
 
 ## Cron job pattern
 Use an isolated `agentTurn` cron job.
@@ -24,8 +24,8 @@ Recommended job name:
 Recommended cron prompt contents:
 - explicit trigger phrase: `Run recurring USD liquidity plumbing HTML report`
 - current repo root path
-- latest output path: `index.html`
 - archive output path convention under `reports/`
+- `index.html` should not be touched unless the user explicitly requests a latest-report landing page
 - reminder to use official-data-first workflow
 - reminder to update the latest HTML and archive a dated copy
 - reminder to commit and push if git auth is available
@@ -35,9 +35,9 @@ Recommended cron prompt contents:
 2. Read `references/data-playbook.md`.
 3. Read `references/html-report-spec.md`.
 4. Generate the HTML report.
-5. Write/update:
-   - `index.html`
+5. Write:
    - `reports/YYYY-MM-DD_usd_liquidity_analysis_report.html`
+   - leave `index.html` unchanged unless the user explicitly asked for it to be refreshed
 6. If the repo is git-tracked:
    - `git add index.html reports ...`
    - `git commit`
