@@ -83,8 +83,9 @@ dist/usd-liquidity-html-reporter.skill
 
 ### skill 내부
 - `SKILL.md` — 스킬 본문. 세팅/실행 규칙
+- `references/source-map.md` — 네가 처음 준 원본 source map URL 모음
 - `references/data-playbook.md` — 공식데이터 우선 수집·해석 규칙
-- `references/html-report-spec.md` — 기관형 HTML 출력 스펙
+- `references/html-report-spec.md` — 라이트/모바일 우선 기관형 HTML 출력 스펙
 - `references/cron-automation.md` — 정기 실행 자동화 규칙
 - `assets/report-shell.html` — HTML 리포트 템플릿 뼈대
 

@@ -30,10 +30,10 @@ Target feel:
 - premium fintech terminal on mobile
 - serious, calm, high-trust
 
-Palette direction:
+Required visual direction:
 - page background: `bg-slate-100`
 - main cards: `bg-white`
-- hero card: deep slate / near-black
+- hero card: also light, white or very light slate only
 - headings: `text-slate-900`
 - body text: `text-slate-600`
 - secondary labels: `text-slate-500`
@@ -41,13 +41,14 @@ Palette direction:
 
 Use:
 - `rounded-2xl` or `rounded-3xl`
-- `shadow-sm` and selective `shadow-lg`
+- `shadow-sm` with selective `shadow-md`
 - strong spacing discipline
+- compact mobile typography
 
 Avoid:
-- playful colors
-- excessive gradients
-- neon styling
+- dark or near-black hero backgrounds by default
+- heavy gradients
+- neon accents
 - decorative illustrations
 - emojis in the report body
 
@@ -63,7 +64,7 @@ So the hero section must include:
 - one regime badge
 - one plain-language sentence
 - 3 key driver chips
-- 3 headline numbers with labels
+- 3 headline numbers
 
 ## Recommended page architecture
 1. Hero section
@@ -77,16 +78,17 @@ So the hero section must include:
 9. Next checkpoints section
 10. Sources footer
 
-The dashboard chart section should sit above the fold on mobile as much as possible and must include the most decision-useful visuals first:
+The dashboard chart section should appear as high as possible on mobile and must prioritize the most decision-useful visuals first:
 - recent path / reserve bridge
 - money-market implementation
 - Treasury funding structure
 - six-layer score comparison
+- conditions panel
 
 ## Chart requirements
 Charts are mandatory when data are available.
 The chart section must feel information-dense enough that a user can understand the liquidity regime from the visuals alone.
-Use at least **5 chart cards** when the data permit, not counting optional mini-sparklines inside cards.
+Use at least **5 chart cards** when the data permit.
 
 ### Non-negotiable chart rule
 A chart is not decoration.
@@ -124,7 +126,7 @@ If a chart does not add information beyond a sentence, do not include it.
   - 2Y/10Y, IG/HY spreads, dollar direction, or a compact conditions dashboard
 - **Scenario/risk-balance chart**
   - horizontal bars for base / improvement / deterioration transmission pressure
-- **Per-layer mini sparklines**
+- **Per-layer mini sparklines or metric strips**
   - add inside six-layer cards when a clean recent trend exists
 
 ### Chart-type guidance
@@ -133,27 +135,28 @@ If a chart does not add information beyond a sentence, do not include it.
 - waterfall / contribution bars: reserve bridge or funding source decomposition
 - donut chart: only for true composition views, such as bill/note/bond mix
 - horizontal bars: scenario bias, pressure ranking, or score distribution
-- sparkline: compact trend cue inside a card
+- sparkline / metric strip: compact trend cue inside a card
 
-### Chart rules
-- mobile readable
-- legible labels without zoom
-- restrained institutional colors
-- short titles with explicit market question framing
-- no fake placeholder values
-- no charts with ambiguous units
+### Mobile chart rules
+- charts must be readable without pinch-zoom
+- on mobile, prefer slightly smaller fonts over cropped or clipped charts
+- reduce legend, axis, and label font sizes as needed to keep the full chart visible
+- every chart card should fit the full plot area within the viewport width
+- avoid chart containers that force horizontal scrolling for the visual itself
+- if a chart becomes cramped, reduce decorative padding first, then reduce text size, not plot visibility
+- keep chart titles short
 - annotate units clearly (`$bn`, `%`, `bp`, score)
 - show source/date/frequency in or directly below the card
 - if mixing official weekly data and daily market data, label the clocks clearly in the chart subtitle or footnote
 
 ### Six-layer visual rule
-Each of the six-layer analysis cards should include a mini visual or compact metric strip when the underlying data are available.
+Each of the six-layer analysis cards should include a mini visual, compact metric strip, or explicit unavailable-state block when data are available or missing.
 Examples:
-- Fed balance sheet card: reserves / ON RRP / TGA mini trend
+- Fed balance sheet card: reserves / ON RRP / TGA mini trend or metric strip
 - money markets card: SOFR-IORB / EFFR-IORB spread strip
-- Treasury card: bill/coupon mix or TGA direction bar
-- dealer/bank card: inventory/capacity proxy bar or note when unavailable
-- financial conditions card: yields/spreads mini trend
+- Treasury card: bill/coupon mix or TGA direction metrics
+- dealer/bank card: inventory/capacity proxy or explicit missing-series block
+- financial conditions card: yields/spreads mini metrics
 - global dollar card: dollar / BIS direction cue or explicit `확인 불가`
 
 If a layer lacks enough data for a chart, show a compact unavailable-state block that names the missing series and why they matter.

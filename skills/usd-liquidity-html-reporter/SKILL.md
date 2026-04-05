@@ -37,6 +37,7 @@ Use this skill in three modes:
    - Repo root: current working repo if one is present; otherwise the current workspace root.
 
 3. **Load the detailed references**
+   - Read `references/source-map.md` first so the original source URLs remain available exactly as defined.
    - Read `references/data-playbook.md` before collecting data.
    - Read `references/html-report-spec.md` before rendering HTML.
    - Use `references/cron-automation.md` when creating or updating the recurring job.
@@ -63,7 +64,9 @@ Use this skill in three modes:
 - Treat dealer/bank capacity as a transmission bottleneck, not an afterthought.
 - Avoid bumper-sticker conclusions like `liquidity up = risk assets up`.
 - Make the chart section evidence-dense, not decorative.
-- When data are available, show visually: reserve path, reserve bridge/contribution, money-market implementation, Treasury funding structure, and six-layer comparison.
+- Follow the original source map URLs exactly via `references/source-map.md`.
+- When data are available, show visually: reserve path, reserve bridge/contribution, money-market implementation, Treasury funding structure, six-layer comparison, and a conditions panel.
+- Default to a light mobile-first design; do not use a dark hero unless the user explicitly asks for it.
 - If a required series is missing, say `확인 불가` and identify why it matters.
 
 ## File outputs
