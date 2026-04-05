@@ -81,6 +81,12 @@ dist/usd-liquidity-html-reporter.skill
 - `dist/usd-liquidity-html-reporter.skill` — 패키징된 skill 파일
 - `skills/usd-liquidity-html-reporter/` — 실제 OpenClaw skill 디렉터리
 
+### 예시 HTML
+- `reports/2026-04-05_usd_liquidity_analysis_report_institutional_v3_light_mobile.html`
+  - 라이트 배경
+  - 모바일 우선
+  - 그래프가 한 화면에 최대한 들어오도록 압축한 샘플
+
 ### skill 내부
 - `SKILL.md` — 스킬 본문. 세팅/실행 규칙
 - `references/source-map.md` — 네가 처음 준 원본 source map URL 모음
